@@ -1,0 +1,11 @@
+body{
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+h1,h2,h3,h4,h5,h6,p{
+	color: white;
+}
+.container-fluid{
+	background: rgba(50,50,150,0.2);
+}
