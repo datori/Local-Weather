@@ -43,13 +43,33 @@ function getWeatherData(lat, long) {
 
 function setPage(name, weatherInfo, atmoInfo, windInfo, data) {
 	// Setup basic structure for weather information container.
-    $(".container-fluid").append(`<h1>${name}</h1>
+    $(".container-fluid").append(`<br><br>
+    <h1>${name}</h1> 	
+    <h4 id="temperature">
+    	<a>${Math.floor(atmoInfo[0] - 273.15)} <span id="temp-unit">C</span></a>
+    </h4>
     <br>
 	<div class='container well'>
 		<h2>Local Weather Conditions</h4>
 		<br>
 	</div>
 	`);
+
+    // Temperature change button.
+	$('a').on('click', function(){
+		if($(this).text().slice(-1) == 'C'){
+			$(this).animate({opacity: 0.0}, 500, function(){
+				$(this).html(`${Math.floor((atmoInfo[0] * 1.8) - 459.67)} <span id="temp-unit">F</span>`);
+			});
+			$(this).animate({opacity: 1.0}, 500);
+		}
+		else{
+			$(this).animate({opacity: 0.0}, 500, function(){
+				$(this).html(`${Math.floor(atmoInfo[0] - 273.15)} <span id="temp-unit">C</span>`);
+			})
+			$(this).animate({opacity: 1}, 500);
+		}
+	});
 
 	weather = [];
 	// Slice the weatherInfo array to a length of 3 items maximum.
@@ -87,7 +107,6 @@ function setPage(name, weatherInfo, atmoInfo, windInfo, data) {
 		<div class="row justify-content-center">
 			<div class="col-lg-4">
 				<h2>Atmospheric</h2>
-				<p id="temperature">Temperature: ${Math.floor(atmoInfo[0] - 273.15)} C</p>
 				<p>Pressure: ${atmoInfo[1]} hPa</p>
 			</div>
 			<div class="col-lg-4">
@@ -101,5 +120,6 @@ function setPage(name, weatherInfo, atmoInfo, windInfo, data) {
 
 	// CSS.
 	$("body").css({"background-image": "url(resources/imgs/sunny-sky.jpg)"});
+	$("#holder").animate({opacity: 1.0}, 1000);
 
 }

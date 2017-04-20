@@ -6,6 +6,15 @@ body{
 h1,h2,h3,h4,h5,h6,p{
 	color: white;
 }
+#holder{
+	opacity: 0.0;
+}
+#temp-unit{
+	text-decoration: underline;
+}
+#temp-unit:hover{
+	text-decoration: none;
+}
 .container-fluid{
 	background: rgba(50,50,150,0.2);
 }
