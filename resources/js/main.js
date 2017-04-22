@@ -23,7 +23,7 @@ function setLocation(location) {
 
 function getWeatherData(lat, long) {
     var apiKey = "842db364b7c37e80310e97ef46cf8396";
-    jQuery.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appID=" + apiKey,
+    jQuery.getJSON("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appID=" + apiKey,
         function(json) {
             var name = json.name; // Location name.
             var weatherInfo = []; // Weather condition.
