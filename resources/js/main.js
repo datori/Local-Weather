@@ -107,37 +107,37 @@ function setPage(name, weatherInfo, weatherID, atmoInfo, windInfo) {
 
 	// Change background image based on primary weather condition.
 	if(weatherID >= 200 && weatherID < 300){ // Thunder Storm.
-		$("body").css({"background-image": "url(resources/imgs/thunderstorm.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2016/06/13/22/12/flash-1455285_960_720.jpg)"});
 	}
 	else if(weatherID >= 300 && weatherID < 400){ // Drizzle.
-		$("body").css({"background-image": "url(resources/imgs/drizzle.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2015/05/02/13/19/leaf-749929_960_720.jpg)"});
 	}
 	else if(weatherID >= 500 && weatherID < 600){ // Rain.
-		$("body").css({"background-image": "url(resources/imgs/rain.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2013/06/07/15/34/rain-122691_960_720.jpg)"});
 	}
 	else if(weatherID >= 600 && weatherID < 700){ // Snow.
-		$("body").css({"background-image": "url(resources/imgs/snow.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2012/03/01/01/35/winter-20248_960_720.jpg)"});
 	}
 	else if(weatherID >= 700 && weatherID < 800){ // Atmospheric.
-		$("body").css({"background-image": "url(resources/imgs/atmospheric.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2016/11/02/10/04/france-1790999_960_720.jpg)"});
 	}
 	else if(weatherID == 800){ // Clear Sky.
-		$("body").css({"background-image": "url(resources/imgs/clear-sky.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2014/01/10/17/48/leaves-241701_960_720.jpg)"});
 	}
 	else if(weatherID > 800 && weatherID < 900){ // Clouds.
-		$("body").css({"background-image": "url(resources/imgs/cloudy.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2013/10/16/10/17/blue-sky-196230_960_720.jpg)"});
 	}
 	else if(weatherID >= 900 && weatherID < 907){ // Extreme conditions.
-		$("body").css({"background-image": "url(resources/imgs/extreme.jpg)"});
+		$("body").css({"background-image": "url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/9WTNHBFJUX.jpg)"});
 	}
 	else if(weatherID >= 951 && weatherID < 959){ // Misc. Wind conditions.
-		$("body").css({"background-image": "url(resources/imgs/wind.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2014/03/12/11/16/wind-285970_960_720.jpg)"});
 	}
 	else if(weatherID >= 959 && weatherID < 963){ // Misc. Storm conditions.
-		$("body").css({"background-image": "url(resources/imgs/extreme.jpg)"});
+		$("body").css({"background-image": "url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/9WTNHBFJUX.jpg)"});
 	}
 	else{ // Default.
-		$("body").css({"background-image": "url(resources/imgs/clear-sky.jpg)"});
+		$("body").css({"background-image": "url(https://cdn.pixabay.com/photo/2014/01/10/17/48/leaves-241701_960_720.jpg)"});
 	}
 
 	// CSS.
